@@ -1,0 +1,12 @@
+C:\Dev\repos\Utilities\MessageDecompressor\MessageDecompressor.Library\bin\Debug\net6.0\MessageDecompressor.Library.deps.json
+C:\Dev\repos\Utilities\MessageDecompressor\MessageDecompressor.Library\bin\Debug\net6.0\MessageDecompressor.Library.dll
+C:\Dev\repos\Utilities\MessageDecompressor\MessageDecompressor.Library\bin\Debug\net6.0\MessageDecompressor.Library.pdb
+C:\Dev\repos\Utilities\MessageDecompressor\MessageDecompressor.Library\obj\Debug\net6.0\MessageDecompressor.Library.csproj.AssemblyReference.cache
+C:\Dev\repos\Utilities\MessageDecompressor\MessageDecompressor.Library\obj\Debug\net6.0\MessageDecompressor.Library.GeneratedMSBuildEditorConfig.editorconfig
+C:\Dev\repos\Utilities\MessageDecompressor\MessageDecompressor.Library\obj\Debug\net6.0\MessageDecompressor.Library.AssemblyInfoInputs.cache
+C:\Dev\repos\Utilities\MessageDecompressor\MessageDecompressor.Library\obj\Debug\net6.0\MessageDecompressor.Library.AssemblyInfo.cs
+C:\Dev\repos\Utilities\MessageDecompressor\MessageDecompressor.Library\obj\Debug\net6.0\MessageDecompressor.Library.csproj.CoreCompileInputs.cache
+C:\Dev\repos\Utilities\MessageDecompressor\MessageDecompressor.Library\obj\Debug\net6.0\MessageDecompressor.Library.dll
+C:\Dev\repos\Utilities\MessageDecompressor\MessageDecompressor.Library\obj\Debug\net6.0\refint\MessageDecompressor.Library.dll
+C:\Dev\repos\Utilities\MessageDecompressor\MessageDecompressor.Library\obj\Debug\net6.0\MessageDecompressor.Library.pdb
+C:\Dev\repos\Utilities\MessageDecompressor\MessageDecompressor.Library\obj\Debug\net6.0\ref\MessageDecompressor.Library.dll
