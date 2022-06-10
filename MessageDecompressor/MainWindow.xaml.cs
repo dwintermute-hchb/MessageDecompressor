@@ -1,22 +1,9 @@
-﻿using System;
-using System.IO;
-using System.Linq;
+﻿
 using System.Reactive.Disposables;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Input;
-using Azure.Messaging.ServiceBus;
-using MessageDecompressor.ViewModels;
-using MessagePack;
-using MessagePack.ImmutableCollection;
-using MessagePack.Resolvers;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
+using MessageDecompressorWpf.ViewModels;
 using ReactiveUI;
 
-namespace MessageDecompressor
+namespace MessageDecompressorWpf
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -45,12 +32,26 @@ namespace MessageDecompressor
                         )
                     .DisposeWith(disposableRegistration);
 
+                this.Bind(
+                        ViewModel,
+                        viewModel => viewModel.ErrorText,
+                        view => view.tb_errors.Text
+                        )
+                    .DisposeWith(disposableRegistration);
+
                 this.OneWayBind(
-                    ViewModel,
-                    viewModel => viewModel.SearchResults,
-                    view => view.tb_decompressed
-                    )
-                .DisposeWith(disposableRegistration);
+                        ViewModel,
+                        viewModel => viewModel.SearchResults,
+                        view => view.searchResultsListBox.ItemsSource
+                        )
+                    .DisposeWith(disposableRegistration);
+
+                this.OneWayBind(
+                        ViewModel,
+                        viewModel => viewModel.ErrorsVisible,
+                        view => view.border_errors.Visibility
+                        )
+                    .DisposeWith(disposableRegistration);
             });
         }
     }

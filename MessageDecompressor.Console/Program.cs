@@ -1,7 +1,7 @@
 ﻿using System;
-using MessageDecompressor.Library;
+using MessageDecompressorWpf.Library;
 
-namespace MessageDecompressor
+namespace MessageDecompressorWpf
 {
     public class Program
     {
@@ -9,7 +9,8 @@ namespace MessageDecompressor
         {
             if (args.Length != 2)
             {
-                Console.WriteLine($"Usage: message_decompressor <connectionString> <queueName>");
+                Console.WriteLine($"Usage: message_decompressor <connection-string> <queue-name>");
+                return;
             }
 
             await GetMessages(args[0], args[1]);

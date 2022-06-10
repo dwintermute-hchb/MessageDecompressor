@@ -1,9 +1,9 @@
 ﻿<reactiveui:ReactiveWindow
-        x:Class="MessageDecompressor.MainWindow"
+        x:Class="MessageDecompressorWpf.MainWindow"
         x:TypeArguments="vm:MainAppViewModel"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:reactiveui="http://reactiveui.net"
-        xmlns:vm="clr-namespace:MessageDecompressor.ViewModels"
+        xmlns:vm="clr-namespace:MessageDecompressorWpf.ViewModels"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
@@ -23,6 +23,7 @@
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
+            
             <Label Grid.Column="0" VerticalAlignment="Center">Connection String:</Label>
             <TextBox Grid.Column="1" x:Name="tb_connectionString" MinWidth="250" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0"></TextBox>
 
@@ -31,11 +32,16 @@
         </Grid>
 
         <Grid Grid.Row="1">
-            <TextBlock x:Name="tb_errors" Visibility="Visible"></TextBlock>
+            <Border BorderBrush="Red" BorderThickness="2" x:Name="border_errors" Margin="10,0,7,0">
+                <TextBox IsReadOnly="True" Height="Auto" x:Name="tb_errors" MaxHeight="295" Foreground="DarkRed"  ScrollViewer.VerticalScrollBarVisibility="Auto" TextWrapping="Wrap"/>
+            </Border>
         </Grid>
 
         <Grid Grid.Row="2">
-            <TextBlock x:Name="tb_decompressed" Width="500" Height="200"></TextBlock>
+
+            <ListBox x:Name="searchResultsListBox" Grid.ColumnSpan="3" HorizontalAlignment="Stretch" ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                 Grid.Row="1" Margin="10,6,10,10" HorizontalContentAlignment="Stretch" ScrollViewer.CanContentScroll="False"/>
+            <!--<TextBox x:Name="tb_decompressed" Width="Auto" Height="Auto" IsReadOnly="True" TextWrapping="Wrap" ScrollViewer.VerticalScrollBarVisibility="Auto"></TextBox>-->
         </Grid>
     </Grid>
 </reactiveui:ReactiveWindow>

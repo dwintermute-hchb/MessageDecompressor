@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Dev\repos\Utilities\MessageDecompressor\MessageDecompressor\App.xaml
-11407045341
+2975684156
 
-41167436925
-209-592708237
-MainWindow.xaml;
+71153438794
+221144901805
+DecompressedMessageView.xaml;MainWindow.xaml;
 
 False
 

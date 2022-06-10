@@ -3,8 +3,9 @@ using MessagePack;
 using MessagePack.ImmutableCollection;
 using MessagePack.Resolvers;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
-namespace MessageDecompressor.Library
+namespace MessageDecompressorWpf.Library
 {
     public class MessageDecompressorLib
     {
@@ -46,7 +47,14 @@ namespace MessageDecompressor.Library
             var tempJObject = JsonConvert.DeserializeObject(initialJson);
             var formattedJson = JsonConvert.SerializeObject(tempJObject, Formatting.Indented);
 
-            return new DecompressedItem(message.MessageId, formattedJson);
+            return new DecompressedItem(message.MessageId, formattedJson, ExpandJson(initialJson));
+        }
+
+        private static string ExpandJson(string json)
+        {
+            var jobject = JObject.Parse(json);
+
+            return "FIXME";
         }
     }
 }
